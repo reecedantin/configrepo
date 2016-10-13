@@ -1,0 +1,196 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:87:A6:6A:A8:3D",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+	"description": "DANTIN FRANKLIN HOMEBRIDGE CONFIG FILE-10/12/16",
+
+	"accessories": [
+    {
+        "accessory": "GATE",
+        "name": "Gate",
+        "pyloc": "../../../../../../../../../../../../home/pi/Desktop/blink7once.py"
+    }
+      ],
+
+	"platforms": [
+{
+  "platform": "Camera-ffmpeg",
+  "cameras": [
+    {
+      "name": "Front Door",
+      "videoConfig": {
+        "source": "-re -i rtsp://admin:admin1@192.168.0.17:554/",
+        "maxStreams": 2,
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "maxFPS": 30
+      }
+    },
+    {
+      "name": "Driveway",
+      "videoConfig": {
+        "source": "-re -i rtsp://admin:admin1@192.168.0.72:554/",
+        "maxStreams": 2,
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "maxFPS": 30
+      }
+    },
+    {
+      "name": "Backyard",
+      "videoConfig": {
+        "source": "-re -i rtsp://192.168.0.201:554/",
+        "maxStreams": 2,
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "maxFPS": 30
+      }
+    },
+    {
+      "name": "AC Units",
+      "videoConfig": {
+        "source": "-re -i rtsp://192.168.0.202:554/",
+        "maxStreams": 2,
+        "maxWidth": 1280,
+        "maxHeight": 720,
+        "maxFPS": 30
+      }
+    }
+  ]
+},
+{
+		"platform": "GlobalCacheItach",
+		"name": "Global Cache Itach",
+		"devices": [{
+			"name": "Theater",
+			"host": "192.168.0.70",
+			"enableLearnLogging": true,
+			"ports": [
+			{
+				"name":"Family Room TV",
+				"commands":{
+					"on": "1,38109,1,1,342,171,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,21,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,63,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,1520,342,85,22,3658,342,85,22,3658,342,85,22,3658,342,85,22,3800",
+					"off":"1,38109,1,1,342,171,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,21,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,63,22,21,22,21,22,21,22,63,22,21,22,21,22,21,22,21,22,63,22,63,22,63,22,21,22,63,22,63,22,63,22,63,22,1520,342,85,22,3658,342,85,22,3658,342,85,22,3658,342,85,22,3800"
+				}
+			},
+			{
+				"name":"Kitchen TV",
+				"commands":{
+					"on":"1,37425,1,1,14,70,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,3700",
+					"off":"1,37425,1,1,14,70,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,21,21,21,21,21,21,21,21,21,21,63,21,21,21,63,21,63,21,63,21,63,21,63,21,63,21,1755,171,169,21,63,21,63,21,63,21,21,21,21,21,21,21,21,21,21,21,63,21,63,21,63,21,3700"
+				}
+			},
+			{
+				"name": "Projector",
+				"commands":
+				{
+					"on": "1,38343,1,1,342,170,22,64,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,64,22,21,22,64,22,21,22,64,22,21,22,64,22,21,22,21,22,21,22,21,22,21,22,64,22,21,22,21,22,64,22,64,22,64,22,64,22,64,22,21,22,64,22,64,22,21,22,1556",
+					"off": ["on","on"]
+				}
+			}]
+		}]
+	},
+	{
+		"platform": "YamahaAVR",
+		"play_volume": -35,
+		"setMainInputTo": "AV1",
+		"discovery_timeout": 5
+	},
+	{
+        	"platform": "openHAB",
+        	"name": "openHAB",
+        	"host": "0.0.0.0",
+        	"port": "8080",
+        	"sitemap": "dantin",
+        	"useLabelForName": true,
+		"customAttrs": [
+		{
+      "itemName":"Thermostats_MasterBed_TempC",
+      "itemLabel":"Master Temperature",
+      "itemManufacturer":"OpenHAB Omnilink",
+      "itemModel":"HAI OMNIPRO2",
+      "itemType":"TemperatureSensorItem"
+    },{
+			"itemName":"Thermostats_Floor1_TempC",
+			"itemLabel":"First Floor Temperature",
+			"itemManufacturer":"OpenHAB Omnilink",
+			"itemModel":"HAI OMNIPRO2",
+			"itemType":"TemperatureSensorItem"
+		},{
+			"itemName":"Zones_SGarage",
+			"itemLabel":"South Garage Door",
+			"itemType":"GarageDoorOpenerItem",
+			"itemSubType":"CurrentDoorStateItem",
+			"itemUniqueAggregationId":1
+		},{
+			"itemName":"SGarage",
+			"itemLabel":"South Garage Door",
+			"itemType":"GarageDoorOpenerItem",
+			"itemSubType":"TargetDoorStateItem",
+			"itemUniqueAggregationId":1
+		},{
+			"itemName":"Zones_NGarage",
+			"itemLabel":"North Garage Door",
+			"itemType":"GarageDoorOpenerItem",
+			"itemSubType":"CurrentDoorStateItem",
+			"itemUniqueAggregationId":3
+		},{
+			"itemName":"NGarage",
+			"itemLabel":"North Garage Door",
+			"itemType":"GarageDoorOpenerItem",
+			"itemSubType":"TargetDoorStateItem",
+			"itemUniqueAggregationId":3
+		},{
+			"itemName":"Areas_Main_Alarm",
+			"itemLabel":"Security",
+			"itemType":"SecuritySystemItem",
+			"itemSubType":"SSAlarmStateItem",
+			"itemUniqueAggregationId":4
+		},{
+			"itemName":"Areas_Main_currentMode",
+			"itemLabel":"Security",
+			"itemType":"SecuritySystemItem",
+			"itemSubType":"SSCurrentStateItem",
+			"itemUniqueAggregationId":4
+		},{
+			"itemName":"Areas_Main_targetMode",
+			"itemLabel":"Security",
+			"itemType":"SecuritySystemItem",
+			"itemSubType":"SSTargetStateItem",
+			"itemUniqueAggregationId":4
+		},{
+                        "itemName":"Thermostats_Floor2_TempC",
+                        "itemLabel":"Second Floor Thermostat",
+                        "itemType":"ThermostatItem",
+                        "itemSubType":"CurrentTemperatureItem",
+                        "itemUniqueAggregationId":5
+
+		},{
+                        "itemName":"Thermostats_Floor2_CoolPointC",
+                        "itemLabel":"Second Floor Thermostat",
+                        "itemType":"ThermostatItem",
+                        "itemSubType":"CoolingThresholdTemperatureItem",
+                        "itemUniqueAggregationId":5
+
+                },{
+                        "itemName":"Thermostats_Floor2_HeatPointC",
+                        "itemLabel":"Second Floor Thermostat",
+                        "itemType":"ThermostatItem",
+                        "itemSubType":"HeatingThresholdTemperatureItem",
+                        "itemUniqueAggregationId":5
+
+                },{
+                        "itemName":"Thermostats_Floor2_System",
+                        "itemLabel":"Second Floor Thermostat",
+                        "itemType":"ThermostatItem",
+                        "itemSubType":"TargetHeatingCoolingStateItem",
+                        "itemUniqueAggregationId":5
+
+                }]
+
+    }]
+}
