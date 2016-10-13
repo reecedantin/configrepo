@@ -109,18 +109,6 @@
         	"useLabelForName": true,
 		"customAttrs": [
 		{
-      "itemName":"Thermostats_MasterBed_TempC",
-      "itemLabel":"Master Temperature",
-      "itemManufacturer":"OpenHAB Omnilink",
-      "itemModel":"HAI OMNIPRO2",
-      "itemType":"TemperatureSensorItem"
-    },{
-			"itemName":"Thermostats_Floor1_TempC",
-			"itemLabel":"First Floor Temperature",
-			"itemManufacturer":"OpenHAB Omnilink",
-			"itemModel":"HAI OMNIPRO2",
-			"itemType":"TemperatureSensorItem"
-		},{
 			"itemName":"Zones_SGarage",
 			"itemLabel":"South Garage Door",
 			"itemType":"GarageDoorOpenerItem",
@@ -163,34 +151,77 @@
 			"itemSubType":"SSTargetStateItem",
 			"itemUniqueAggregationId":4
 		},{
-                        "itemName":"Thermostats_Floor2_TempC",
-                        "itemLabel":"Second Floor Thermostat",
-                        "itemType":"ThermostatItem",
-                        "itemSubType":"CurrentTemperatureItem",
-                        "itemUniqueAggregationId":5
-
+			"itemName":"Thermostats_Floor2_TempC",
+			"itemLabel":"Second Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CurrentTemperatureItem",
+			"itemUniqueAggregationId":5
 		},{
-                        "itemName":"Thermostats_Floor2_CoolPointC",
-                        "itemLabel":"Second Floor Thermostat",
-                        "itemType":"ThermostatItem",
-                        "itemSubType":"CoolingThresholdTemperatureItem",
-                        "itemUniqueAggregationId":5
-
-                },{
-                        "itemName":"Thermostats_Floor2_HeatPointC",
-                        "itemLabel":"Second Floor Thermostat",
-                        "itemType":"ThermostatItem",
-                        "itemSubType":"HeatingThresholdTemperatureItem",
-                        "itemUniqueAggregationId":5
-
-                },{
-                        "itemName":"Thermostats_Floor2_System",
-                        "itemLabel":"Second Floor Thermostat",
-                        "itemType":"ThermostatItem",
-                        "itemSubType":"TargetHeatingCoolingStateItem",
-                        "itemUniqueAggregationId":5
-
-                }]
-
+			"itemName":"Thermostats_Floor2_CoolPointC",
+			"itemLabel":"Second Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CoolingThresholdTemperatureItem",
+			"itemUniqueAggregationId":5
+		},{
+			"itemName":"Thermostats_Floor2_HeatPointC",
+			"itemLabel":"Second Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"HeatingThresholdTemperatureItem",
+			"itemUniqueAggregationId":5
+		},{
+			"itemName":"Thermostats_Floor2_System",
+			"itemLabel":"Second Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"TargetHeatingCoolingStateItem",
+			"itemUniqueAggregationId":5
+		},{
+			"itemName":"Thermostats_Floor1_TempC",
+			"itemLabel":"First Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CurrentTemperatureItem",
+			"itemUniqueAggregationId":6
+		},{
+			"itemName":"Thermostats_Floor1_CoolPointC",
+			"itemLabel":"First Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CoolingThresholdTemperatureItem",
+			"itemUniqueAggregationId":6
+		},{
+			"itemName":"Thermostats_Floor1_HeatPointC",
+			"itemLabel":"First Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"HeatingThresholdTemperatureItem",
+			"itemUniqueAggregationId":6
+		},{
+			"itemName":"Thermostats_Floor1_System",
+			"itemLabel":"First Floor Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"TargetHeatingCoolingStateItem",
+			"itemUniqueAggregationId":6
+		},{
+			"itemName":"Thermostats_MasterBed_TempC",
+			"itemLabel":"Master Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CurrentTemperatureItem",
+			"itemUniqueAggregationId":7
+		},{
+			"itemName":"Thermostats_MasterBed_CoolPointC",
+			"itemLabel":"Master Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"CoolingThresholdTemperatureItem",
+			"itemUniqueAggregationId":7
+		},{
+			"itemName":"Thermostats_MasterBed_HeatPointC",
+			"itemLabel":"Master Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"HeatingThresholdTemperatureItem",
+			"itemUniqueAggregationId":7
+		},{
+			"itemName":"Thermostats_MasterBed_System",
+			"itemLabel":"Master Thermostat",
+			"itemType":"ThermostatItem",
+			"itemSubType":"TargetHeatingCoolingStateItem",
+			"itemUniqueAggregationId":7
+		}]
     }]
 }
